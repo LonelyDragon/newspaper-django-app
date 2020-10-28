@@ -135,4 +135,11 @@ LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+DEFAULT_FROM_EMAIL = 'webmaster@localhost'
+EMAIL_HOST = 'smtp.mailgun.org'
+EMAIL_HOST_USER = 'postmaster@sandbox4e38b8a87ab94f8aa001d2ed22a65d31.mailgun.org'
+EMAIL_HOST_PASSWORD = 'b90ce5fa0454ee9f7394d7980492a024-9b1bf5d3-39226b16'
+EMAIL_PORT = '587'
+EMAIL_USE_TLS = True
