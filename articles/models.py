@@ -5,9 +5,9 @@ from django.urls import reverse
 
 
 
-class Artcle(models.Model):
+class Article(models.Model):
     title = models.CharField(max_length=255)
-    body = models.TextField
+    body = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
     author = models.ForeignKey(
         get_user_model(),
