@@ -5,9 +5,9 @@ from django.urls.base import clear_script_prefix
 from .models import Article, Comment
 
 
-class CommentInLine(admin.StackedInline):
+class CommentInLine(admin.TabularInline):
     model = Comment
-    extra = 0
+    
 
 
 class ArticleAdmin(admin.ModelAdmin):
