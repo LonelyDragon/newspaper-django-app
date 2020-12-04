@@ -11,6 +11,10 @@ class ArticleListView(LoginRequiredMixin, ListView):
     model = Article
     template_name = 'article_list.html'
     login_url = 'login'
+    queryset = Article.objects.order_by('date')
+    
+    def get_queryset(self):
+        return self.queryset.reverse()
 
 class ArticleDetailView(LoginRequiredMixin, DetailView):
     model = Article
