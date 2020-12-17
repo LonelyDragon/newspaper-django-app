@@ -15,9 +15,13 @@
             </div>
             <div class="card-body">
                 <p>{{ article.body}}</p>
-                <a href="{% url 'article_edit' article.pk %}">Edit</a> | 
-                <a href="{% url 'article_delete' article.pk %}">Delete</a> | 
-                <a href="{% url 'article_comment_add' article.pk %}">Add a comment</a>
+                {% if user.username == article.author.username %}
+                    <a href="{% url 'article_edit' article.pk %}">Edit</a> | 
+                    <a href="{% url 'article_delete' article.pk %}">Delete</a> | 
+                    <a href="{% url 'article_comment_add' article.pk %}">Add a comment</a>
+                {% else %}
+                    <a href="{% url 'article_comment_add' article.pk %}">Add a comment</a>
+                {% endif %}
             </div>
             <div class="card-footer">
                 {% for comment in article.comments.all %}

@@ -5,7 +5,18 @@
 {% block content %}
     <div class="jumbotron">
         <h1 class="disoplay-4">Newspaper app</h1>
-        <p class="lead">A newspaper website build with Django</p>
+        <p class="lead">Новостной блог на Django</p>
+        <p class="lead">Этот проект одним из результатов прочтения книги <a href="https://djangoforbeginners.com/">Django for beginners</a> с небольшими доработками:</p>
+        <ul class="list-unstyled lead">
+            <li>Доработана система комментариев:</li>
+                <ul>
+                    <li>Вывод всех комментариев под каждым постом</li>
+                    <li>Добавлена форма комментирования</li>
+                    <li>Реализовано ограничение списка доступных операций над постом пользователю</li>
+                </ul>
+            <li>Изменена сортировка постов по дате (новые -> старые)</li>
+        </ul>
+        <p class="lead">Код выложен в репозиторий на <a href="https://github.com/LonelyDragon/newspaper-django-app">GitHub</a></p>
         <p class="lead">
             <a class="btn btn-primary btn-lg" href="{% url 'article_list' %}" role="button">View All Articles</a>
         </p>
