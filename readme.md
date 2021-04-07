@@ -5,8 +5,8 @@
 _Ключи проекта вынесены в отдельный файл конфига_
 ## Requirenents
 Используется:
-**Django 3.0.1
-**django-crispy-forms 1.8.1
-**whitenoise 4.1.4
-**gunicorn 19.9.0
-**Python 3.7
+- Django 3.0.1
+- django-crispy-forms 1.8.1
+- whitenoise 4.1.4
+- gunicorn 19.9.0
+- Python 3.7
