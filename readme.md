@@ -3,7 +3,7 @@
 Немного доделал:
 
 _Ключи проекта вынесены в отдельный файл конфига_
-## Requirenents
+## Requirements
 Используется:
 - Django 3.0.1
 - django-crispy-forms 1.8.1
